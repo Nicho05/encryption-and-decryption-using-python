@@ -1,0 +1,36 @@
+from cryptography.fernet import Fernet
+
+Nama = input("Masukan nama : ")
+Email = input("Masukan email : ")
+Password = input("Masukkan Password : ")
+
+key = Fernet.generate_key()
+fernet = Fernet(key)
+
+# Ini adalah code untuk mengenkripsi Nama
+encNama = fernet.encrypt(Nama.encode())
+
+# Ini adalah code untuk mengenkripsi Password
+encPassword = fernet.encrypt(Password.encode())
+
+# Ini adalah code untuk mengenkripsi Email
+encEmail = fernet.encrypt(Email.encode())
+
+# Ini adalah code untuk mendekripsi Nama
+decNama = fernet.decrypt(encNama).decode()
+
+# Ini adalah code untuk mendekripsi Password
+decPassword = fernet.decrypt(encPassword).decode()
+
+# Ini adalah code untuk mendekripsi Password
+decEmail = fernet.decrypt(encEmail).decode()
+
+# Ini adalah code untuk mengeprint password dan nama yang sudah di enkripsi
+print(f"Nama setelah di enkripsi : {encNama}")
+print(f"Nama setelah di enkripsi : {encEmail}")
+print(f"Nama setelah di enkripsi : {encPassword}")
+
+# Ini adalah code untuk mengeprint password dan nama yang sudah di dekripsi
+print(f"Nama setelah di dekripsi : {decNama}")
+print(f"Nama setelah di dekripsi : {decEmail}")
+print(f"Nama setelah di dekripsi : {decPassword}")
