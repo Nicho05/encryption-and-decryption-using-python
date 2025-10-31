@@ -27,10 +27,10 @@ decEmail = fernet.decrypt(encEmail).decode()
 
 # Ini adalah code untuk mengeprint password dan nama yang sudah di enkripsi
 print(f"Nama setelah di enkripsi : {encNama}")
-print(f"Nama setelah di enkripsi : {encEmail}")
-print(f"Nama setelah di enkripsi : {encPassword}")
+print(f"Email  di enkripsi : {encEmail}")
+print(f"Password setelah di enkripsi : {encPassword}")
 
 # Ini adalah code untuk mengeprint password dan nama yang sudah di dekripsi
 print(f"Nama setelah di dekripsi : {decNama}")
-print(f"Nama setelah di dekripsi : {decEmail}")
-print(f"Nama setelah di dekripsi : {decPassword}")
+print(f"Email setelah di dekripsi : {decEmail}")
+print(f"Password setelah di dekripsi : {decPassword}")
